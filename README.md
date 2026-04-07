@@ -115,7 +115,31 @@ Start from the upper-left square and read **counterclockwise in a spiral**. Conv
 
 ![The Seed is Planted](./theseedisplanted.png)
 
-The pictures refer to the song **[The Warning (by Logic)](https://www.rockol.com/uk/lyrics-61092449/logic-the-warning-inner-mix)**. You can decipher this by rearranging the images: `war` + `ning` and `LO` + (crypto) `gic`.
+The pictures refer to the song **The Warning (by Logic)**. You can decipher this by rearranging the images: `war` + `ning` and `LO` + (crypto) `gic`.
+
+**Lyrics:**
+> **intro**
+> The warning
+> 
+> **verse**
+> Phase one
+> The seed is planted when opposites attract
+> Can you dig it?
+> It takes the physical to create the physical
+> 
+> Phase two
+> The flower blossoms through what seems to be a concrete surface
+> i.e. greed, racism, insanity, physical and social handicaps
+> These are the things that mob the flower
+> Red rose or black rose; no in-between
+> 
+> Phase 3
+> The Judgement
+> If it were to fall upon you today, which flower would you be?
+> The red rose or the black?
+> 
+> **outro**
+> This is the warning
 
 This webpage also contains a hidden `POST` form accessible via your browser's Developer Tools (F12 in Chrome).
 1. Unhide it.
