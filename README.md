@@ -257,7 +257,26 @@ The symbol blob (Block 1) translated via EBCDIC 1141 yields a sequence of letter
 `vtkvplmepphluw... (snip)`
 
 Go to a cipher tool like [CipherTools](https://ciphertools.co.uk/decode.php), paste the string, select **Beaufort**, and use the key **THEMATRIXHASYOU**. The translated message resembles The Architect from *The Matrix*:
-> `YOUR LIFE IS THE SUM OF A REMAINDER OF AN UNBALANCED EQUATION... THE FUNCTION OF THE YOU IS NOW TO RETURN TO THE SOURCE CODES... AFTER WHICH YOU WILL BE REQUIRED TO SELECT FROM OVER TWENTY-THREE CIPHERS SIXTEEN ENCRYPTIONS AND OR SEVEN INTERTWINED PASSWORDS TO FIND THE ACTUAL PRIVATE KEYNOTE... GOOD LUCK NEVERTHELESS I REALLY HOPE YOURE THE ONE CIAO BELLA O`
+
+  YOUR LIFE IS THE SUM OF A REMAINDER OF AN UNBALANCED EQUATION INHERENT TO THE PROGRAMMING OF THIS PUZZLE 
+  YOU ARE THE EVENTUALITY OF AN ANOMALY WHICH DESPITE MY SINCEREST EFFORTS I HAVE BEEN UNABLE TO ELIMINATE 
+  FROM WHAT IS OTHERWISE A HARMONY OF MATHEMATICAL PRECISION WHILE IT REMAINS A BURDEN TO SEDULOUSLY AVOID IT 
+  IT IS NOT UNEXPECTED AND THUS NOT BEYOND A MEASURE OF CONTROL WHICH HAS LED YOU INEXORABLY HERE YOU 
+  YOU HAVEN'T ANSWERED MY QUESTION ME QUITE RIGHT INTERESTING THAT WAS QUICKER THAN THE OTHERS PLEASE IF YOU 
+  FIND A WAY TO COMPLETE THE LAST PART OF THE PUZZLE TAKE THE PRIVATE KEY YOUVE EARNED IT BUT PLEASE TAKE 
+  THIS TO HEART THAT WHAT A WISEMAN ABOVE HINTED AT IS WORTH HUNDRED FOURTY OF THE INVESTMENT THAT'S 
+  WHAT US GUYS AT GSMG ARE TRYING TO ACCOMPLISH IN THE END PLEASE JUST HELP US BUILD IT INSTEAD OF JUST 
+  WAISTING YOUR LIFETIME BY HUNTING FOR WORTHLESS PRICES AND THROPHIES LIKE THIS I'M SORRY TO 
+  TELL YOU THAT YOUVE COME THIS FAR BUT YOU'LL NEVER FINISH THE LAST TASK I EXPECT YOU TO SAY BULLSHIT 
+  WELL DENIAL IS THE MOST PREDICTABLE OF ALL HUMAN RESPONSES BUT REST ASSURED THIS WILL NOT BE THE LAST TIME 
+  I HAVE DESTROYED A RESTLESS SOUL AND I HAVE BECOME EXCEEDINGLY EFFICIENT AT IT THE FUNCTION OF THE YOU IS 
+  NOW TO RETURN TO THE SOURCE CODES ALLOWING A TEMPORARY DISSEMINATION OF THE CODE YOU HOPEFULLY CARRY 
+  REINSERTING THE PRIME BASICS AFTER WHICH YOU WILL BE REQUIRED TO SELECT FROM OVER TWENTY-THREE CIPHERS 
+  SIXTEEN ENCRYPTIONS AND OR SEVEN INTERTWINED PASSWORDS TO FIND THE ACTUAL PRIVATE KEYNOTE THAT ALSO 
+  BRUTE FORCING MIGHT BE REQUIRED FAILURE TO COMPLY WITH THIS PROCESS WILL RESULT IN A CATACLYSMIC 
+  SYSTEM CRASH KILLING YOUR WILLPOWER WHICH COUPLED WITH THE EXTERMINATION OF YOUR WILL TO LIVE AND WILL 
+  ULTIMATELY RESULT IN THE EXTINCTION OF THE ENTIRENESS OF YOURSELF SELF GOOD LUCK NEVERTHELESS I REALLY
+  HOPE YOURE THE ONE CIAO BELLA O
 
 #### Phase 3.2.2: VIC Cipher
 The number string:
@@ -287,16 +306,9 @@ Using a [VIC Cipher Decoder](https://www.dcode.fr/vic-cipher):
 There is a hint from the puzzle creator in Decentraland. By going to the coordinates shown, you trigger an audio file.
 **Solution:** Split the stereo track, invert one side, mix them back, convert to mono, and generate a spectrogram. The visual wave output reads: **`HASHTHETEXT`**
 
-### Poem from the Creator
-```text
-Roses are White but often Red.
-Yellow has a number and so does Blue.
-Go back to the first puzzle piece without further ado.
+![Spectogram Image](./spectogram.png)
 
-It might have shown you only one door, beware that the rabbits nest may contain a whole lot more.
-
-Hush hush.
-```
+### HASH THE TEXT
 
 Go to the very first puzzle base page (`https://gsmg.io/puzzle`) and run SHA256 on the primary textual content:
 `GSMGIO5BTCPUZZLECHALLENGE1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe`
@@ -314,18 +326,14 @@ This hash leads to a hidden endpoint for Salphaseion:
 
 This hidden phase can be split into multiple sections. Currently, only some have been partially decoded. There are a series of letters intermingled with `z` markers, a long binary-like string containing `abba`, and an AES blob:
 
-> `d b b i b f b h c c b e g b...`
-> `s h a b e f o u r f i r s t h i n t i s y o u r l a s t c o m m a n d `
-> `U 2 F s d G V k X 1 8 6 t Y U... ` *(AES Payload)*
-> `s h a b e f a n s t o o`
-> *(And large string of "abba"s)*
+    d b b i b f b h c c b e g b i h a b e b e i h b e g g e g e b e b b g e h h e b h h f b a b f d h b e f f c d b b f c c c g b f b e e g g e c b e d c i b f b f f g i g b e e e a b e a b b a b b a b a b b a a a a b a b b b a b a a a b b b a a b a a b b a b a a b a b b b b a a a a b b b a a b b a b b b a b a b a b b a b b a b a b b a b b a a a b b a b a a b a b b b a a b b a b b b a b a a f a e d g g e e d f c b d a b h h g g c a d c f e d d g f d g b g i g a a e d g g i a f a e c g h g g c d a i h e h a h b a h i g c e i f g b f g e f g a i f a b i f a g a e g e a c g b b e a g f g g e e g g a f b a c g f c d b e i f f a a f c i d a h g d e e f g h h c g g a e g d e b h h e g e g h c e g a d f b d i a g e f c i c g g i f d c g a a g g f b i g a i c f b h e c a e c b c e i a i c e b g b g i e c d e g g f g e g a e d g g f i i c i i i f i f h g g c g f g d c d g g e f c b e e i g e f i b g i b g g g h h f b c g i f d e h e d f d a g i c d b h i c g a i e d a e h a h g h h c i h d g h f h b i i c e c b i i c h i h i i i g i d d g e h h d f d c h c b a f g f b h a h e a g e g e c a f e h g c f g g g g c a g f h h g h b a i h i d i e h h f d e g g d g c i h g g g g g h a d a h i g i g b g e c g e d f c d g g a c c d e h i i c i g f b f f h g g a e i d b b e i b b e i i f d g f d h i e e e i e e e c i f d g d a h d i g g f h e g f i a f f i g g b c b c e h c e a b f b e d b i i b f b f d e d e e h g i g f a a i g g a g b e i i c h i e d i f b e h g b c c a h h b i i b i b b i b d c b a h a i d h f a h i i h i c z a g d a f a o a h e i e c g g c h g i c b b h c g b e h c f c o a b i c f d h h c d b b c a g b d a i o b b g b e a d e d d e z c f o b f d h g d o b d g o o i i g d o c d a o o f i d h z s h a b e f o u r f i r s t h i n t i s y o u r l a s t c o m m a n d U 2 F s d G V k X 1 8 6 t Y U 0 h V J B X X U n B U O 7 C 0 + X 4 K U W n W k C v o Z S x b R D 3 w N s G W V H e f v d r d 9 z a b b a a b a b a b b a b b b a a b b b a b a a a b b a a b a b a b b b a a b a Q v X 0 t 8 v 3 j P B 4 o k p s p x e b R i 6 s E 1 B M l 5 H I 8 R k u + K e j U q T v d W O X 6 n Q j S p e p X w G u N / j J s h a b e f a n s t o o
 
 ### Decoding Salphaseion
 
 The two highlighted `abba` sections can be decoded first. Treat **`a = 0`** and **`b = 1`**, and interpret the resulting strings as 8-bit binary representation of ASCII characters:
 
-1. `a b b a b b a b a b b...` -> **`matrixsumlist`**
-2. `a b b a a b a b a b b...` -> **`enter`**
+1. `a b b a b b a b a b b a a a a b a b b b a b a a a b b b a a b a a b b a b a a b a b b b b a a a a b b b a a b b a b b b a b a b a b b a b b a b a b b a b b a a a b b a b a a b a b b b a a b b a b b b a b a a` -> **`matrixsumlist`**
+2. `a b b a a b a b a b b a b b b a a b b b a b a a a b b a a b a b a b b b a a b a` -> **`enter`**
 
 **The "shabef" Encoding:**
 We see the sequence `shabef` directly before English text `"our first hint is your last command"`.
@@ -345,3 +353,14 @@ Treating these sequences as Base-16 integers provides corresponding hex strings,
 2. Translates to: **`thispassword`**
 
 *(Further steps to decrypt the remaining AES blob in Salphaseion with these passwords are ongoing...)*
+
+### Poem from the Creator
+```text
+Roses are White but often Red.
+Yellow has a number and so does Blue.
+Go back to the first puzzle piece without further ado.
+
+It might have shown you only one door, beware that the rabbits nest may contain a whole lot more.
+
+Hush hush.
+```
