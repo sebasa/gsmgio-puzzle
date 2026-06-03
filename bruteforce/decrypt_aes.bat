@@ -11,7 +11,7 @@ REM  4. Requiere OpenSSL en el PATH
 REM     https://slproweb.com/products/Win32OpenSSL.html
 REM ================================================
 
-set CIPHER_FILE=secret3.txt
+set CIPHER_FILE=secret1.txt
 set KEYS_FILE=wordlist.txt
 set OUTPUT_DIR=resultados
 set OPENSSL=openssl

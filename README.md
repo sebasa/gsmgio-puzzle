@@ -22,6 +22,7 @@ This repository contains all publicly known hints and partial solutions for the 
   - [Poem from the Creator](#poem-from-the-creator)
 - [Salphaseion and Cosmic Duality](#salphaseion-and-cosmic-duality)
   - [Decoding Salphaseion](#decoding-salphaseion)
+- [ECDSA Signatures from the Puzzle Address](#ecdsa-signatures-from-the-puzzle-address)
 
 ---
 
@@ -308,19 +309,16 @@ There is a hint from the puzzle creator in Decentraland. By going to the coordin
 
 ![Spectogram Image](./spectogram.png)
 
-### HASH THE TEXT
-
-Go to the very first puzzle base page (`https://gsmg.io/puzzle`) and run SHA256 on the primary textual content:
-`GSMGIO5BTCPUZZLECHALLENGE1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe`
-
-`SHA256(...) = 89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32`
-
-This hash leads to a hidden endpoint for Salphaseion:
-`https://gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32`
-
 ---
 
 ## Salphaseion and Cosmic Duality
+
+Go to the very first puzzle base page (`https://gsmg.io/puzzle`) and run SHA256 on the primary textual content:
+
+`SHA256(`GSMGIO5BTCPUZZLECHALLENGE1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe`) = 89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32`
+
+This hash leads to a hidden endpoint:
+`https://gsmg.io/89727c598b9cd1cf8873f27cb7057f050645ddb6a7a157a110239ac0152f6a32`
 
 ![Salphaseion Image](./SalPhaselonCosmicDuality.png)
 
@@ -364,3 +362,46 @@ It might have shown you only one door, beware that the rabbits nest may contain 
 
 Hush hush.
 ```
+
+---
+
+## ECDSA Signatures from the Puzzle Address
+
+The following are the ECDSA signature components extracted from spending transactions of the puzzle address `1GSMG1JC9wtdSwfwApgj2xcmJPAwx7prBe`. All inputs share the same uncompressed public key.
+
+**Public Key (all inputs):**
+```
+04f4d1bbd91e65e2a019566a17574e97dae908b784b388891848007e4f55d5a46
+49c73d25fc5ed8fd7227cab0be4e576c0c6404db5aa546286563e4be12bf33559
+```
+
+Each signature consists of:
+- **R**, **S** — the two components of the ECDSA signature
+- **Z** — the transaction sighash (the message that was signed)
+- **sighash_type** — `1` = `SIGHASH_ALL`
+
+---
+
+### Transaction 1
+[`2aa9a4a90be819d5122d70c993280785a0508f163521e7b38cebb4db0b071b13`](https://www.blockchain.com/es/explorer/transactions/btc/2aa9a4a90be819d5122d70c993280785a0508f163521e7b38cebb4db0b071b13)
+
+| vin | R | S | Z |
+|-----|---|---|---|
+| 0 | `dbe31ca9440892abcec35c0aa83380e1c35d2a33ea99fc314e6bcaf299b8847a` | `17a2531912ce634185f572357b49873764545d8703723002d3c3778e763e98dc` | `3596e7108347b041e49483c08d94f516ec16383a7a0d18d9cfef100988bfd680` |
+| 1 | `fce22a0a026a33197ae65efa47420aa1c4efdbf95f8370f4da22802392ab2db2` | `193bbf54a6be9ef136eefee1dd17006e4d75558f7a26982c266825de2bae9bbe` | `9ecb8572ff38c8e3920c0448193be179b780c02b4324c8e787c7f7f44d1f8590` |
+| 2 | `776706ca3039c2e127aff3f144333e9afc6c4dcf5ba2dd9243268324622d65f6` | `2dae7fda100bf3567d813790ccb1837481a2852d3f74678120e0cd094fda0b96` | `f481edd08f280642d81ed4dc6ce6954ceea7b58b7cfc1be5b7e100c2d02b9c93` |
+
+---
+
+### Transaction 2
+[`88cdb3cdca12b471551b1b26188508a14ca5fd8a415223ffb7c190381c9b9df3`](https://www.blockchain.com/es/explorer/transactions/btc/88cdb3cdca12b471551b1b26188508a14ca5fd8a415223ffb7c190381c9b9df3)
+
+| vin | R | S | Z |
+|-----|---|---|---|
+| 0 | `1df5cf8403c9309aba324ef94a43551a32a258326009abb4ac1153c06de327d0` | `1640b665814359b3eae6cb1deca9f61cc90b968bf62693ed8f6e79d2544a3df6` | `0b65aca4e1694ae6fb6b51730b8c7454e2316175b8620a8c106db0695490be69` |
+| 1 | `4c18f2f20ea146ad2e4accaa0094d7b52bf4da5322e78fd1a651a526fdc43dae` | `7ecbcd531a64343e622e25f25d45d2ced1fae9623e559951ab6d330d872ab2d7` | `cac416f877393e70883695aed1dfa2241c2e32cade358b5b19761f8d4f232716` |
+| 2 | `429e4e8f162b0dafc1ca9f2b13e4e0fa57a26c2b9f2bf5a3ae934c40ea1f7845` | `40a3aae71a870fe95170abfb99c1b475cd82ecba99b02094bcce436b943e4129` | `1d9f4b33476c64e4881c30b8a8ac379879635146fd67169b1a4677a4aec2ed73` |
+
+---
+
+> **Note:** Having multiple signatures from the same key allows for nonce-reuse (lattice) attacks if any two R values are repeated across inputs. All R values above are distinct, but the 6 signatures together may still carry useful information for lattice-based private key recovery attempts.
